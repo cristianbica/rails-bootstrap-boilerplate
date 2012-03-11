@@ -1,4 +1,5 @@
 .content
-  = yield
-  .clearfix
-.clearfix
+  .row
+    .span12
+      = render partial: "layouts/flash_alerts"
+      = yield
