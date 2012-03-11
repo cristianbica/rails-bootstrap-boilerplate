@@ -7,19 +7,23 @@ gem 'mysql2'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
+gem "simple-navigation"
 
-#gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'
+
 
 gem 'delayed_job_active_record'
 
+gem 'devise'
+gem 'cancan'
 
+gem 'state_machine'
 
-# gem 'cancan'
-# gem 'state_machine'
-# gem 'devise'
-# gem 'inherited_resources'
+gem 'inherited_resources'
+gem 'has_scope'
+
 # gem 'kaminari'
-# gem 'has_scope'
+#gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'
+
 # gem 'streamio-ffmpeg'
 # gem 'bluecloth'
 
