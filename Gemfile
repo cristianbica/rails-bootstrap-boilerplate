@@ -10,9 +10,10 @@ gem 'simple_form'
 
 #gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'
 
+gem 'delayed_job_active_record'
 
 
-# gem 'delayed_job_active_record'
+
 # gem 'cancan'
 # gem 'state_machine'
 # gem 'devise'
