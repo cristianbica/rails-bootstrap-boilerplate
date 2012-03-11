@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  full_name: MyString
+  dob: 2012-03-11
+  city: MyString
+  country: MyString
+
+two:
+  user: 
+  full_name: MyString
+  dob: 2012-03-11
+  city: MyString
+  country: MyString

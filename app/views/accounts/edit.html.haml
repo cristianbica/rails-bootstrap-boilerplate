@@ -1,0 +1,18 @@
+=simple_form_for resource, as: :account, url: account_path, html: {autocomplete: :off } do |form|
+  %fieldset
+    %legend Login Information    
+    .inputs
+      =form.input :email
+      =form.input :password
+      =form.input :password_confirmation
+  %fieldset
+    %legend Profile
+    .inputs
+    =form.simple_fields_for :profile do |profile_form|
+      =profile_form.input :full_name
+      =profile_form.input :dob, start_year: Date.today.year - 90, end_year: Date.today.year - 12, include_blank: true
+      =profile_form.input :city
+      =profile_form.input :country, as: :string
+    
+  .form-actions
+    =form.button :submit, class: 'btn-primary'
