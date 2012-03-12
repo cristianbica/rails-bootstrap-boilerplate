@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_attributes
   
-  has_one :profile  
-  after_create :create_profile
+  has_one :profile, inverse_of: :user
+  after_create :create_profile, :unless => Proc.new {|record| record.profile.present?}
   accepts_nested_attributes_for :profile
   
 end

@@ -1,6 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    POpen4 (0.1.4)
+      Platform (>= 0.4.0)
+      open4
+    Platform (0.4.0)
     actionmailer (3.2.2)
       actionpack (= 3.2.2)
       mail (~> 2.4.0)
@@ -41,6 +45,7 @@ GEM
     coffee-script-source (1.2.0)
     commonjs (0.2.0)
       therubyracer (~> 0.9.9)
+    database_cleaner (0.7.1)
     delayed_job (3.0.1)
       activesupport (~> 3.0)
     delayed_job_active_record (0.3.2)
@@ -51,9 +56,16 @@ GEM
       orm_adapter (~> 0.0.3)
       railties (~> 3.1)
       warden (~> 1.1.1)
+    diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.3.0)
       multi_json (~> 1.0)
+    factory_girl (2.6.3)
+      activesupport (>= 2.3.9)
+    factory_girl_rails (1.7.0)
+      factory_girl (~> 2.6.0)
+      railties (>= 3.0.0)
+    ffaker (1.13.0)
     haml (3.1.4)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -85,6 +97,7 @@ GEM
     mime-types (1.17.2)
     multi_json (1.1.0)
     mysql2 (0.3.11)
+    open4 (1.3.0)
     orm_adapter (0.0.6)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -114,11 +127,19 @@ GEM
       json (~> 1.4)
     responders (0.8.0)
       railties (~> 3.1)
-    sass (3.1.15)
-    sass-rails (3.2.4)
-      railties (~> 3.2.0)
-      sass (>= 3.1.10)
-      tilt (~> 1.3)
+    rspec (2.8.0)
+      rspec-core (~> 2.8.0)
+      rspec-expectations (~> 2.8.0)
+      rspec-mocks (~> 2.8.0)
+    rspec-core (2.8.0)
+    rspec-expectations (2.8.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.8.0)
+    rspec-rails (2.8.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.8.0)
     simple-navigation (3.7.0)
       activesupport (>= 2.3.2)
     simple_form (2.0.1)
@@ -128,6 +149,7 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.5)
     state_machine (1.1.2)
     therubyracer (0.9.10)
       libv8 (~> 3.3.10)
@@ -146,6 +168,8 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
+    yui-compressor (0.9.6)
+      POpen4 (>= 0.1.4)
 
 PLATFORMS
   ruby
@@ -153,18 +177,24 @@ PLATFORMS
 DEPENDENCIES
   cancan
   coffee-rails (~> 3.2.1)
+  database_cleaner
   delayed_job_active_record
   devise
+  factory_girl_rails
+  ffaker
   haml-rails
   has_scope
   inherited_resources
   jquery-rails
+  less-rails
   mysql2
   rails (= 3.2.2)
-  sass-rails (~> 3.2.3)
+  rspec-rails
   simple-navigation
   simple_form
+  sqlite3
   state_machine
   therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
+  yui-compressor
