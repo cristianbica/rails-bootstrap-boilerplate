@@ -21,18 +21,11 @@ gem 'state_machine'
 gem 'inherited_resources'
 gem 'has_scope'
 
-# gem 'kaminari'
-#gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'
+gem 'kaminari'
+gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'
 
-# gem 'streamio-ffmpeg'
-# gem 'bluecloth'
-
-
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'less-rails'
-  #gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
@@ -41,13 +34,24 @@ end
 gem 'jquery-rails'
 
 group :test do
-  gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'mocha'
+
+  gem 'guard'  
+  gem "guard-bundler"
+  gem "guard-spork"
+  gem "guard-rspec"
+  gem "rb-fsevent"
+  
+  gem "ruby_gntp"
+  gem "growl"
+  
 end
 
 group :development do
   gem 'yui-compressor', :require => 'yui/compressor'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :development, :test do
@@ -55,4 +59,4 @@ group :development, :test do
   gem 'ffaker'
 end
 
-# gem 'ruby-debug19', :require => 'ruby-debug'
+

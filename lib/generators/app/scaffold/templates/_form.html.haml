@@ -1,0 +1,10 @@
+%fieldset
+  %legend
+    =t ".#{controller.action_name}_title"
+  .inputs.ptm
+    <%- columns.each do |column| -%>
+    =form.input :<%= column.name %>
+    <%- end -%>
+  .form-actions
+    =form.button :submit, t("actions.save"), class: 'btn-primary'
+    =button_link_to "Cancel", :back, type: :blank, size: :normal

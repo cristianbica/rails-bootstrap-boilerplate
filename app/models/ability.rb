@@ -5,6 +5,8 @@ class Ability
     
     can [:update], User, id: user.id
     can [:update], Profile, user_id: user.id
+    can :manage, :all
+    
     
     # Define abilities for the passed in user here. For example:
     #

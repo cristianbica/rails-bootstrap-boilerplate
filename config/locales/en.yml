@@ -1,5 +1,13 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  actions:
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    save: "Save"
+    back: "Back"
+  messages:
+    confirmation:
+      title: "Delete Record"
+      message: "Are you sure you want to delete the selected record?"
+      "yes": "Yes, delete it!"
+      "no": "No way"

@@ -1,0 +1,15 @@
+%legend=t ".title"
+<%- columns.each do |column| -%>
+%label{:class => "bold"}= t(".labels.<%= column.name %>") + ":"
+%p= resource.<%= column.name %>
+<%- end -%>
+
+.form-actions
+  = button_link_to t("actions.back"), <%= controller_routing_path %>_path, :icon => 'arrow-left', :type => :blank, :size => :normal, :icon_color => :black
+  != "&nbsp; &nbsp;"
+  -if can? :show, resource
+    =button_link_to t("actions.show"), <%= singular_controller_routing_path %>_path(resource), :icon => 'eye-open', :type => :blank, :size => :normal, :icon_color => :black
+  -if can? :update, resource
+    =button_link_to t("actions.edit"), edit_<%= singular_controller_routing_path %>_path(resource), :icon => :edit, :type => :blank, :size => :normal, :icon_color => :black
+  -if can? :destroy, resource
+    =button_link_to t("actions.delete"), <%= singular_controller_routing_path %>_path(resource), :method => :delete, :icon => :destroy, :type => :blank, :size => :normal, :icon_color => :black, :confirm => t("messages.confirmation").to_json
