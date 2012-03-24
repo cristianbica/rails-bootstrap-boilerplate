@@ -22,7 +22,7 @@ An empty Rails application hooked up with some basic stuff: inherited_resources,
 
 ### Twitter bootstrap
 
-The application is themed by bootstrap. Simple form generates the forms for bootstrap. Pagination is styled by bootstrap_kaminari. Also there's a app:scaffold generator that make some pretty nice pages :)
+The application is themed by bootstrap. Simple form generates the forms for bootstrap. Pagination is styled by bootstrap_kaminari. Also there's an app:scaffold generator that make some pretty nice pages :)
 
 ### RSpec
 
@@ -40,10 +40,10 @@ The application is themed by bootstrap. Simple form generates the forms for boot
 * done!
 
 ## Howto use the app:scaffold
-* rails g model a_model_name a_field:with_type another_field:with_type
+* rails g model model field1:type field2:type
 * rake db:migrate
-* rails g app:scaffold pluralized_model_name
-* now you can do configure the model, controller, view
+* rails g app:scaffold pluralized_model
+* now you can configure the model, controller, view
 
 NOTE: don't forget to setup the cancan ability. By default all users can manage everything
 
