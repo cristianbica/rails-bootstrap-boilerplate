@@ -32,12 +32,29 @@ The application is themed by bootstrap. Simple form generates the forms for boot
 * [spork](https://github.com/sporkrb/spork) + [guard](https://github.com/guard/guard) + guard-spork + guard-rspec + guard-bundler - TDD :)
 
 
+## Howto
+
+* Clone the repo
+* setup config/database.yml
+* rake db:migrate
+* done!
+
+## Howto use the app:scaffold
+* rails g model a_model_name a_field:with_type another_field:with_type
+* rake db:migrate
+* rails g app:scaffold pluralized_model_name
+* now you can do configure the model, controller, view
+
+NOTE: don't forget to setup the cancan ability. By default all users can manage everything
+
 ## TODO
 
 * more detailed explanation
 * write tests for user model, authentication, authorization
 * setup integration tests
 * enable OAuth
+* enable registration
 * localize for other languages
+* add roles to users for better authorization management
 * make this a gem with a generator that does all the setup
 
