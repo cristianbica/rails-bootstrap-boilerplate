@@ -1,4 +1,4 @@
-exports ?= this
+window.exports or= this
 
 class HtmlBuilder
 

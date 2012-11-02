@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rake'
+gem 'rails', '3.2.8'
 
 gem 'mysql2'
 
@@ -22,10 +23,11 @@ gem 'inherited_resources'
 gem 'has_scope'
 
 gem 'kaminari'
-gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'
+gem 'bootstrap_kaminari'
 
 group :assets do
   gem 'less-rails'
+  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
@@ -38,25 +40,24 @@ group :test do
   gem 'sqlite3'
   gem 'mocha'
 
-  gem 'guard'  
+  gem 'guard'
   gem "guard-bundler"
   gem "guard-spork"
   gem "guard-rspec"
+  gem "guard-pow"
   gem "rb-fsevent"
-  
+
   gem "ruby_gntp"
   gem "growl"
-  
+
 end
 
 group :development do
   gem 'yui-compressor', :require => 'yui/compressor'
-  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
 end
-
 

@@ -1,6 +1,6 @@
 #=require 'html_builder'
 
-exports ?= this
+window.exports or= this
 
 class Popups
   @initialize: ->
